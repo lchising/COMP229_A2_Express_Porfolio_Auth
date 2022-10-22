@@ -1,0 +1,92 @@
+<!-- File Name: main_nav.ejs
+  Student Name: CHI SING LEUNG
+  Student ID: 301268517
+  Date: 22 Oct 2022
+  Description: Update for Assignment 2
+
+-->
+
+<!-- File Name: main_nav.ejs
+  Student Name: CHI SING LEUNG
+  Student ID: 301268517
+  Date: 30 Sep 2022
+-->
+
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="/Assets/images/chi_sing_logos.jpeg" alt="" width="60">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <% if (title == "Home"){ %>
+            <a class="nav-link active" aria-current="page" href="/home">
+            <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/home">
+            <% } %>
+          <i class="fad fa-solid fa-house"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "About Me"){ %>
+            <a class="nav-link active" aria-current="page" href="/about">
+            <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/about">
+            <% } %>
+          <i class="fa-solid fa-circle-info"></i> About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Projects"){ %>
+            <a class="nav-link active" aria-current="page" href="/projects">
+            <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/projects">
+            <% } %>
+            <i class="fa-brands fa-elementor"></i> Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Services"){ %>
+            <a class="nav-link active" aria-current="page" href="/services">
+            <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/services">
+            <% } %>
+          <i class="fa-sharp fa-solid fa-gear"></i> Services</a>
+        </li>
+
+        <% if (title == "Books") { %>
+          <li class="nav-item active">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/book-list"><i class="fa-solid fa-address-card"></i> Business Contact List </a>
+          </li>
+
+        <li class="nav-item">
+          <% if (title == "Contact Me"){ %>
+            <a class="nav-link active" aria-current="page" href="/contact">
+            <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/contact">
+            <% } %>
+          <i class="fa-sharp fa-solid fa-phone"></i> Contact Me</a>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+        <% } %>
+
+        
+    </div>
+  </nav>

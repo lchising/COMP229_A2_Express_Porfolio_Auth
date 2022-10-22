@@ -1,0 +1,41 @@
+<!-- File Name: contact.ejs
+  Student Name: CHI SING LEUNG
+  Student ID: 301268517
+  Date: 30 Sep 2022
+-->
+
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+    <!-- Main Content-->
+    <main class="container">
+      <div class="jumbotron">
+        <div class="panel panel-default">
+          <div class="panel-heading"><br><b>My Contact Information:</b></div>
+          <div class="panel-body">Name: Chi Sing Leung</div>
+          <div class="panel-body">Email Address: lchising@hotmail.com</div>
+          <div class="panel-body">Contact Number: 647-978-9259</div><br><br>  
+        </div>
+      </div>
+
+      <p><b>You can also contact me by the form below:</b></p>
+      <form action="/contact-form" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" ><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" ><br><br>
+        <label for="message">Message:</label><br>
+        <textarea type="text" id="message" name="message">
+        </textarea><br><br>
+        <button type="submit"> Submit</button>
+      </form>
+    </main>
+
+
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
+
+
