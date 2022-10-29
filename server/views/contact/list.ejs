@@ -17,7 +17,7 @@
           <h1><%=title %></h1>
           <% if(typeof displayName == 'string' && displayName) { %>
 
-          <a href="/book-list/add" class="btn btn-primary" role="button">
+          <a href="/contact-list/add" class="btn btn-primary" role="button">
           <i class ="fas fa-plus-circle"></i> Add a contact
           <%}%>
           </a>
@@ -36,19 +36,19 @@
             </tr>
 
             <!--Repetable Templet row-->
-            <% for (let count=0; count<BookList.length; count++){%>
+            <% for (let count=0; count<ContactList.length; count++){%>
               <tr>
-                <td class="text-centre "><%=BookList[count].contact_name %></td>
-                <td class="text-centre "><%=BookList[count].contact_number %></td>
-                <td class="text-centre "><%=BookList[count].email %></td>
+                <td class="text-centre "><%=ContactList[count].contact_name %></td>
+                <td class="text-centre "><%=ContactList[count].contact_number %></td>
+                <td class="text-centre "><%=ContactList[count].email %></td>
                 
                 <% if(typeof displayName == 'string' && displayName) { %>
                 <td class="text-center col-1">
-                  <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                  <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                   <i class="fas fa-pencil-alt"></i> Update</a>
               </td>
               <td class="text-center col-1">
-                  <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                  <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
                   <i class="fas fa-trash-alt"></i> Delete</a>
               </td>
               <%}%>

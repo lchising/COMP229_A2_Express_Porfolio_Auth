@@ -22,5 +22,5 @@ let contactListModel = mongoose.Schema(
   }
 );
 
-//booksmodel to create new book more powerful than just class
+//contact model to create new contact list more powerful than just class
 module.exports = mongoose.model("ContactList", contactListModel);

@@ -1,4 +1,4 @@
-<!-- File Name: add.ejs
+<!-- File Name: edit.ejs
   Student Name: CHI SING LEUNG
   Student ID: 301268517
   Date: 22 Oct 2022
@@ -25,7 +25,7 @@
                 id="nameTextField"
                 placeholder="Enter the Contact Name:"
                 name="contact_name"
-                value="<%= book.contact_name %>"
+                value="<%= contact.contact_name %>"
                 required
               />
             </div>
@@ -38,7 +38,7 @@
                 id="authorTextField"
                 placeholder="Enter the Contact Number:"
                 name="contact_number"
-                value="<%= book.contact_number %>"
+                value="<%= contact.contact_number %>"
                 required
               />
             </div>
@@ -51,7 +51,7 @@
                 id="publishedTextField"
                 placeholder="Enter the Email Address:"
                 name="email"
-                value="<%= book.email %>"
+                value="<%= contact.email %>"
                 required
               />
             </div> <br>
@@ -60,10 +60,10 @@
               <i class="fas fa-edit"></i>Submit
             </button>
 
-            <a href="/book-list/delete/<%= book._id %>" class="btn btn-danger btn-primary">
+            <a href="/contact-list/delete/<%= contact._id %>" class="btn btn-danger btn-primary">
               <i class="fas fa-trash-alt"></i> Delete</a>
 
-            <a href="/book-list" class="btn btn-warning">
+            <a href="/contact-list" class="btn btn-warning">
               <i class="fas fa-undo"></i>Cancel
             </a>
           </form>

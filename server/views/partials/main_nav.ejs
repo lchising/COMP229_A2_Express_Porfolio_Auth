@@ -61,13 +61,15 @@
           <i class="fa-sharp fa-solid fa-gear"></i> Services</a>
         </li>
 
-        <% if (title == "Books") { %>
-          <li class="nav-item active">
-          <% } else  { %>
-          <li class="nav-item">
-          <% } %>
-            <a class="nav-link" href="/book-list"><i class="fa-solid fa-address-card"></i> Business Contact List </a>
-          </li>
+        
+        <li class="nav-item active">
+          <% if (title == "Business Contact List") { %>
+            <a class="nav-link active" aria-current="page" href="/contact-list">
+             <% } else  { %>
+              <a class="nav-link" aria-current="page" href="/contact-list">
+            <% } %>
+           <i class="fa-solid fa-address-card"></i> Business Contact List </a>
+        </li>
 
         <li class="nav-item">
           <% if (title == "Contact Me"){ %>
